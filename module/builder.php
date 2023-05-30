@@ -5,7 +5,7 @@ require_once "text.php";
 class Builder
 {
     public $command;
-    
+    # command line is the head 
     function __construct($command)
     {
         $this->command = $command;
@@ -15,7 +15,7 @@ class Builder
     {
         return $this->command;
     }
-
+    # separate the command line to parts and replace every part with the appropriate class with their own parameters 
     public function commandLine()
     {
         $command = explode(";", $this->command);
@@ -32,6 +32,7 @@ class Builder
             $newCommand[] = $c;
         }
         return $newCommand;
+        # line that contains the type of every part 
     }
 }
 
