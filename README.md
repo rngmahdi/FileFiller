@@ -1,2 +1,2 @@
 # FileFiller
-mini Program that Fills the file with the data you choose 
+mini Program that Fills the file with the data YOU choose 
