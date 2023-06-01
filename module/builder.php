@@ -24,10 +24,8 @@ class Builder
             switch ($c[0]) {
                 case "id":
                     $c = new Id(intval($c[1]));
-                    break;
                 case "Text":
                     $c = new Text($c[1], $c[2]);
-                    break;
             }
             $newCommand[] = $c;
         }
