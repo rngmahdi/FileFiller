@@ -14,4 +14,4 @@ for($i=0;$i<$lines;$i++){
     $line->pushTo($expression);
     
 }
-print 'hello world!';
+// print 'hello world!';
