@@ -19,7 +19,6 @@ class Line
         $commandLine =  $command->commandLine();
         $finalCommand = [];
         foreach ($commandLine as $column) {
-            // var_dump($column);
             switch (get_class($column)) {
                 case 'Id':
                     $finalCommand[]= $column->addId();
@@ -34,12 +33,12 @@ class Line
                     break;
             }
         }
+        // print_r($finalCommand);
         return $finalCommand;
     }
     function pushTo(array $expr)
     {
-        // var_dump($this->fileName);
-        $file = fopen($this->fileName, "a+");
+        $file = fopen($this->fileName, "a");
         fputcsv($file, $expr, $this->separature);
         fclose($file);
     }
